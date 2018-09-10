@@ -56,7 +56,7 @@ public class Text
 //----------------RETURNES PROGRAMMING LANGUAGE AND NAME-------------------
 	
 		
-	
+//WORKING ON HOW TO KEEP INSIDE WHILE STATMENT IN ORDER TO DO MULTIPLE ADDITION PROBLEMS WHITHOUT ASKING TO STAY IN CALC MULTIPLE TIMES	
 		
 //----------------ASKS TO USE THE CALCULATOR------------------------+
 		System.out.print("Would you like to use a Calculator?");
@@ -66,12 +66,6 @@ public class Text
 		System.out.println(calAnswer);
 //----------------ASKS TO USE THE CALCULATOR------------------------+
 		
-
-//For SECURITY this closes the Scanner so it CANT GET ANY INPUT
-//		inputScanner.close();
-//		inputScanner2.close();
-//		inputScanner3.close();
-//-----------------------------------------------------------------------
 		
 		
 //---------------THIS INTRODUCES AND ASKES FOR ONE NUMBER TO ADD---------	
@@ -99,17 +93,16 @@ public class Text
 //Asks if you want to leave or stay in the calculator
 				System.out.print("Would you like to still use the Calculator?");
 			    calAnswer = inputScanner3.nextLine();
-			    System.out.println("See you later!");
+			 
 		}
+			
+			System.out.println("See you later!");
 		
 	} else 
 	
-			while(calAnswer.isEmpty() || calAnswer.equals("no") || calAnswer.equals("n"))
-	{
 			System.out.println("Ok, Bye");
 		
-	}
-		
+//WORKING ON HOW TO KEEP INSIDE WHILE STATMENT IN ORDER TO DO MULTIPLE ADDITION PROBLEMS WHITHOUT ASKING TO STAY IN CALC MULTIPLE TIMES
 }
 //------------------------------------------------------------------------
 	
@@ -152,6 +145,7 @@ public class Text
 		anotherInputScanner.close();
 	}
 
+//Checks to see if its ok to convert data types
 	public boolean validInt(String example) {
 		boolean isValid = false;
 		
@@ -176,4 +170,5 @@ public class Text
 		
 		return isValid;
 	}
+//Checks to see if its ok to convert data types
 }
