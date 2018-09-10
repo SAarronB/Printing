@@ -74,29 +74,41 @@ public class Text
 //-----------------------------------------------------------------------
 		
 		
-//---------------THIS INTRODUCES AND ASKES FOR ONE NUMBER TO ADD---------		
-		while(calAnswer.equals ("y") || calAnswer.equals ("yes")) 
-			
+//---------------THIS INTRODUCES AND ASKES FOR ONE NUMBER TO ADD---------	
+		
+		if(calAnswer.equals ("y") || calAnswer.equals ("yes")) 
 		{
-			System.out.println("Welcome to the Calculator (BETA)");
-			System.out.println("Input first number:>");
-			Scanner inputScanner4 = new Scanner(System.in);
-			//inputScanner4.nextLine();
-			//PROBLEM
-			int addAnswer1 = inputScanner4.nextInt();			
+			while(calAnswer.equals ("y") || calAnswer.equals ("yes")) 
+			
+			{
+				
+				System.out.println("Welcome to the Calculator (BETA)");
+				System.out.println("Input first number:>");
+				Scanner inputScanner4 = new Scanner(System.in);
+				//inputScanner4.nextLine();
+				int addAnswer1 = inputScanner4.nextInt();			
 //---------------THIS INTRODUCES AND ASKES FOR ONE NUMBER TO ADD----------
 
 					
 //THIS ASKES FOR THE SECOND NUMBER TO ADD AND PASSES IT TO CALCULATOR METHOD--
-			System.out.println("Input second number:>");
-			Scanner inputScanner5 = new Scanner(System.in);
-			int addAnswer2 = inputScanner5.nextInt();
-			//inputScanner5.close();
-			calculator(addAnswer1,addAnswer2);
-//For SECURITY this closes the Scanner so it CANT GET ANY INPUT
-//			inputScanner4.close();
-//		inputScanner5.close();
+				System.out.println("Input second number:>");
+				Scanner inputScanner5 = new Scanner(System.in);
+				int addAnswer2 = inputScanner5.nextInt();
+				calculator(addAnswer1,addAnswer2);
+
+//Asks if you want to leave or stay in the calculator
+				System.out.print("Would you like to still use the Calculator?");
+			    calAnswer = inputScanner3.nextLine();
+			    System.out.println("See you later!");
 		}
+		
+	} else 
+	
+			while(calAnswer.isEmpty() || calAnswer.equals("no") || calAnswer.equals("n"))
+	{
+			System.out.println("Ok, Bye");
+		
+	}
 		
 }
 //------------------------------------------------------------------------
@@ -138,5 +150,30 @@ public class Text
 		//anotherInputScanner.nextDouble();
 		System.out.println(magicNumber);
 		anotherInputScanner.close();
+	}
+
+	public boolean validInt(String example) {
+		boolean isValid = false;
+		
+		try {
+			Integer.parseInt(example);
+			isValid = true;
+		} catch(NumberFormatException error) {
+			System.out.println("Type in a valid int value!");
+		}
+		
+		return isValid;
+	}
+	public boolean validDouble(String example) {
+		boolean isValid = false;
+		
+		try {
+			Double.parseDouble(example);
+			isValid = true;
+		}catch(NumberFormatException error) {
+			System.out.println("Only floating point caluse are allawed for input");
+		}
+		
+		return isValid;
 	}
 }
