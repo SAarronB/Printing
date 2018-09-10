@@ -10,15 +10,17 @@ public class Text
 	
 	{
 //Println is a way to print the entire text on one line
-		System.out.println("Standard Output for Java :)");
+//		System.out.println("Standard Output for Java :)");
 		
 //Print is just gonna print the following text in front of what ever other text is behind it.
-		System.out.print("OH boy more ");
-		System.out.println("Words ");
+//		System.out.print("OH boy more ");
+//		System.out.println("Words ");
 		
 		
 //--------------------Calling a method--------------------------------
 		questions();
+		moreInput();
+		
 //--------------------Calling a method---------------------------------
 	}
 	
@@ -27,6 +29,7 @@ public class Text
 	public void questions() 
 	
 	{
+		
 		
 //----------------------ASKES NAME--------------------------------------
 		System.out.print("What is your name?");
@@ -65,42 +68,38 @@ public class Text
 		
 
 //For SECURITY this closes the Scanner so it CANT GET ANY INPUT
-		inputScanner.close();
-		inputScanner2.close();
-		inputScanner3.close();
+//		inputScanner.close();
+//		inputScanner2.close();
+//		inputScanner3.close();
 //-----------------------------------------------------------------------
 		
 		
 //---------------THIS INTRODUCES AND ASKES FOR ONE NUMBER TO ADD---------		
-		if(calAnswer.equals ("y") || calAnswer.equals ("yes")) 
-		
+		while(calAnswer.equals ("y") || calAnswer.equals ("yes")) 
+			
 		{
 			System.out.println("Welcome to the Calculator (BETA)");
 			System.out.println("Input first number:>");
 			Scanner inputScanner4 = new Scanner(System.in);
-			
+			//inputScanner4.nextLine();
 			//PROBLEM
-			String addAnswer1 = inputScanner4.nextLine();
-			
-//-----------------------------------------------------------------------
+			int addAnswer1 = inputScanner4.nextInt();			
+//---------------THIS INTRODUCES AND ASKES FOR ONE NUMBER TO ADD----------
 
-			
-			
-			
-//THIS ASKES FOR THE SECOND NUMBER TO ADD AND PASSES IT TO CALCULATOR METHOD
+					
+//THIS ASKES FOR THE SECOND NUMBER TO ADD AND PASSES IT TO CALCULATOR METHOD--
 			System.out.println("Input second number:>");
 			Scanner inputScanner5 = new Scanner(System.in);
 			int addAnswer2 = inputScanner5.nextInt();
-			inputScanner5.close();
-			//calculator(addAnswer1,addAnswer2);
+			//inputScanner5.close();
+			calculator(addAnswer1,addAnswer2);
 //For SECURITY this closes the Scanner so it CANT GET ANY INPUT
-			inputScanner4.close();
-			inputScanner5.close();
-//------------------------------------------------------------------------
-		} else {
-			System.out.println("Okay then :(");
-	}
+//			inputScanner4.close();
+//		inputScanner5.close();
+		}
+		
 }
+//------------------------------------------------------------------------
 	
 	
 	
@@ -109,7 +108,35 @@ public class Text
 	
 	{
 		int mathAnswer = one + two;
+		System.out.println(mathAnswer);
 		return mathAnswer;
 	}
 //------------------------------CALCULATOR-------------------------------
+
+
+	private void moreInput() 
+	{
+//Declaration is an empty variable
+		Scanner anotherInputScanner;
+	
+
+		anotherInputScanner = new Scanner(System.in);
+	
+		System.out.println("What is the meaning of life and everything?");
+		int answer = anotherInputScanner.nextInt();
+	
+		System.out.println("you typed: " + answer);
+		anotherInputScanner.nextLine();
+		
+		//double holds real numbers AKA numbers with a decimal point!
+		double magicNumber;
+		
+		//initialization of magicNumber variable
+		System.out.println("Type in your favorite fractional number AKA use a decimal");
+		magicNumber = anotherInputScanner.nextDouble();
+		
+		//anotherInputScanner.nextDouble();
+		System.out.println(magicNumber);
+		anotherInputScanner.close();
+	}
 }
