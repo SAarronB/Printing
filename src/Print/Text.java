@@ -4,10 +4,9 @@ package Print;
 import java.util.Scanner;
 
 public class Text
-
 {
-	public void start()
 	
+	public void start()
 	{
 //Println is a way to print the entire text on one line
 //		System.out.println("Standard Output for Java :)");
@@ -16,16 +15,14 @@ public class Text
 //		System.out.print("OH boy more ");
 //		System.out.println("Words ");
 		
-		
 //--------------------Calling a method--------------------------------
 		questions();
 		moreInput();
-		
 //--------------------Calling a method---------------------------------
 	}
 	
 	
-	
+//----------------------------Questions----------------------------
 	public void questions() 
 	
 	{
@@ -79,7 +76,6 @@ public class Text
 				System.out.println("Welcome to the Calculator (BETA)");
 				System.out.println("Input first number:>");
 				Scanner inputScanner4 = new Scanner(System.in);
-				//inputScanner4.nextLine();
 				int addAnswer1 = inputScanner4.nextInt();			
 //---------------THIS INTRODUCES AND ASKES FOR ONE NUMBER TO ADD----------
 
@@ -104,8 +100,7 @@ public class Text
 		
 //WORKING ON HOW TO KEEP INSIDE WHILE STATMENT IN ORDER TO DO MULTIPLE ADDITION PROBLEMS WHITHOUT ASKING TO STAY IN CALC MULTIPLE TIMES
 }
-//------------------------------------------------------------------------
-	
+//----------------------------Questions----------------------------
 	
 	
 //------------------------------CALCULATOR--------------------------------
@@ -123,8 +118,8 @@ public class Text
 	{
 //Declaration is an empty variable
 		Scanner anotherInputScanner;
-	
-
+		
+//initializing variable
 		anotherInputScanner = new Scanner(System.in);
 	
 		System.out.println("What is the meaning of life and everything?");
@@ -161,10 +156,13 @@ public class Text
 	public boolean validDouble(String example) {
 		boolean isValid = false;
 		
+//This object "TRY" will attempt to run some code
 		try {
 			Double.parseDouble(example);
 			isValid = true;
-		}catch(NumberFormatException error) {
+			}
+//If the TRY statment fails then it will go to this and print out text
+		catch(NumberFormatException error) {
 			System.out.println("Only floating point caluse are allawed for input");
 		}
 		
