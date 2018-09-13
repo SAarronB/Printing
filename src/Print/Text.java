@@ -8,12 +8,6 @@ public class Text
 	
 	public void start()
 	{
-//Println is a way to print the entire text on one line
-//		System.out.println("Standard Output for Java :)");
-		
-//Print is just gonna print the following text in front of what ever other text is behind it.
-//		System.out.print("OH boy more ");
-//		System.out.println("Words ");
 		
 //--------------------Calling a method--------------------------------
 		questions();
